@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container {
+      align-items: center;
+    }
+/* for the js animation in the beginning below the nav  */
+    #myDIV {
+  margin: 0px;
+  width: 100%;
+  height: 100px;
+  background: rgb(184, 208, 226);
+  position: relative;
+  font-size: 20px;
+}
+
+/* position for the animation bar */
+@-webkit-keyframes mymove {
+  from {top: 0px;}
+  to {top: 100px;}
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 100px;}
+}
+
+
+  </style>
+  <script> 
+ 
+  </script>
+</head>
+
+<body>
+<!-- nav bar -->
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/https://sxnyya.github.io/LandingPage/"> 
+            <p onmouseover="style.color='purple'" onmouseout="style.color='pink'">Home</p>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://sxnyya.github.io/AboutMe/"> <p onmouseover="style.color='purple'" onmouseout="style.color='pink'">About Me</p></a>
+        </li>  <li class="nav-item">
+          <a class="nav-link active" href="https://sxnyya.github.io/Blog/"> <p onmouseover="style.color='purple'" onmouseout="style.color='pink'">Blog</p></a>
+        </li>
+   
+        <li class="nav-item">
+          <a class="nav-link active" href="https://sxnyya.github.io/Games/"> <p onmouseover="style.color='purple'" onmouseout="style.color='pink'">Games</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://sxnyya.github.io/SignUp/"> <p onmouseover="style.color='purple'" onmouseout="style.color='pink'">Sign-up</p></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div style="text-align:center; font-size:35px; padding-top:2%; " id="myDIV" onclick="myFunction()">Welcome to my project page! click me.</div>
+
+  <script>
+  var x = document.getElementById("myDIV");
+  
+  // Starting the animation with JavaScript
+  function myFunction() {
+    x.style.WebkitAnimation = "mymove 4s 2"; // Code for Chrome, Safari and Opera
+    x.style.animation = "mymove 4s 2";     // Standard syntax
+  }
+  
+  // Code for Chrome, Safari and Opera
+  x.addEventListener("webkitAnimationStart", myStartFunction);
+  x.addEventListener("webkitAnimationIteration", myRepeatFunction);
+  x.addEventListener("webkitAnimationEnd", myEndFunction);
+  
+  // standard syntax
+  x.addEventListener("animationstart", myStartFunction);
+  x.addEventListener("animationiteration", myRepeatFunction);
+  x.addEventListener("animationend", myEndFunction);
+  
+  function myStartFunction() {
+    this.innerHTML = "Scroll down to see all my projects";
+    this.style.backgroundColor = "pink";
+  }
+  
+  function myRepeatFunction() {
+    this.innerHTML = "have fun <3";
+    this.style.backgroundColor = "lightblue";
+  }
+  
+  function myEndFunction() {
+    this.innerHTML = "To know more contact me :)";
+    this.style.backgroundColor = "lightgray";
+  }
+  </script>
+
+
+
+<!-- container for my cards -->
+
+  <div class="container-fluid mt-3">
+ 
+    <script>
+      function mOver(obj) {
+        obj.innerHTML = "Illustrative"
+      }
+      
+      function mOut(obj) {
+        obj.innerHTML = "Self given Project"
+      }
+      </script>
+  
+    <div class="row row-cols-2">
+      <div class="col"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.39.41 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)"   class="card-title">Handmade Illustrations</h4>
+          <p class="card-text">Design has given me means to give my loved ones something unique while practising my
+            bread and butter</p>
+          <a href="#" class="btn btn-primary"  >Know more</a> 
+          <!-- know more takes us on top where the animation has ended and gives a message to contact us to know more -->
+        </div>
+      </div></div>
+      <div class="col"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.40.39 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Abstracts</h4>
+          <p class="card-text">Abstract art gives me to express myseelf creatively in a fun way yet leaving an impact on the audience</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col pt-4"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.41.00 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Realistic Illustrations</h4>
+          <p class="card-text">Making illustrations is something I am very passionate about, be it detailings of an eye of just the eye itself! </p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col pt-4 "> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.41.15 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Infographics</h4>
+          <p class="card-text">These creatively designed, limited spaces of important information teach us so much about the structure</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div> </div>
+    </div>
+   
+  </div>
+  <div class="container-fluid mt-3">
+  
+    <div class="row row-cols-2">
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.41.47 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Handmade Illustrations</h4>
+          <p class="card-text">Design has given me means to give my loved ones something unique while practising my
+            bread and butter</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.42.10 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Posters</h4>
+          <p class="card-text">Abstract art gives me to express myseelf creatively in a fun way yet leaving an impact on the audience</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 4.42.20 PM.png" height="50%" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Realistic Illustrations</h4>
+          <p class="card-text">Making illustrations is something I am very passionate about, be it detailings of an eye of just the eye itself! </p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4 "> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 6.58.19 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Photo-Manipulation</h4>
+          <p class="card-text">These creatively designed, limited spaces of important information teach us so much about the structure</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div> </div>
+    </div>
+   
+  </div>
+
+  <div class="container-fluid mt-3">
+  
+    <div class="row row-cols-2">
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 6.56.46 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Illustrative Posts For Brands</h4>
+          <p class="card-text">Design has given me means to give my loved ones something unique while practising my
+            bread and butter</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 6.58.43 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Tattoo Studio Logo Design</h4>
+          <p class="card-text">Abstract art gives me to express myseelf creatively in a fun way yet leaving an impact on the audience</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 6.57.01 PM.png" height="50%" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <!-- adding function to change the text when mouse is over and also when the mouse leaves -->
+          <h4 onmouseover="mOver(this)" onmouseout="mOut(this)" class="card-title">Illustrative Posts For Brands</h4>
+          <p class="card-text">Making illustrations is something I am very passionate about, be it detailings of an eye of just the eye itself! </p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4 "> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-10-01 at 6.58.51 PM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Minimalist Logo Design</h4>
+          <p class="card-text">These creatively designed, limited spaces of important information teach us so much about the structure</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div> </div>
+    </div>
+   
+  </div>
+
+  <div class="container-fluid mt-3">
+  
+    <div class="row row-cols-2">
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-11-23 at 12.24.25 AM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Packaging Design inpired by Abstracts</h4>
+          <p class="card-text">Design has given me means to give my loved ones something unique while practising my
+            bread and butter</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-11-23 at 12.25.06 AM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Packaging Design inpired by Pop Art Culture</h4>
+          <p class="card-text">Abstract art gives me to express myseelf creatively in a fun way yet leaving an impact on the audience</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4"> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-11-23 at 12.26.29 AM.png" height="50%" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Vinyl Cover Design</h4>
+          <p class="card-text">Making illustrations is something I am very passionate about, be it detailings of an eye of just the eye itself! </p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div></div>
+      <div class="col-sm-12 col-md-6 pt-4 "> <div class="card" style="width:100%">
+        <img class="card-img-top" src="Screenshot 2022-11-23 at 12.25.36 AM.png" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Minimalist Logo Design</h4>
+          <p class="card-text">These creatively designed, limited spaces of important information teach us so much about the structure</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div> </div>
+    </div>
+   
+  </div>
+
+  
+
+
+  <div class="container-fluid mt-5 p-4 bg-dark text-white text-center">
+    <a href="#" class="btn btn-primary" onmouseover="style.color='blue'" onmouseout="style.color='pink'">Back to top</a>
+   
+
+  </div>
+
+</body>
+
+</html>
